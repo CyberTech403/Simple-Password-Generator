@@ -1,1 +1,4 @@
-# Simple-Password-Generator
+## Project Summary: 
+
+### Page Preview 
+
