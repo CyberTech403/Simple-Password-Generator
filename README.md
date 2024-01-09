@@ -8,7 +8,7 @@ https://cybertech403.github.io/Simple-Password-Generator/
 ##
 
 <p align="center">
-<img src="https://github.com/CyberTech403/Simple-Password-Generator/blob/main/Assets/css/Screenshot.png" width = "80%"> 
+<img src="https://github.com/CyberTech403/Simple-Password-Generator/blob/main/Assets/Screenshot.png" width = "80%"> 
 
 ##
 
