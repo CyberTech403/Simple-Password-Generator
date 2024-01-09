@@ -18,13 +18,11 @@ function generatePassword() {
     .map((set, index) => (set ? chars[index] : ""))
     .join("");
 
-  if (length < 8 || allowedChars.length === 0) {
-    const message = length < 8 ? 
-    "(Password must be at least 8 characters)" 
-    : 
-    "(At least 1 set of parameters must be selected)";
+  if (length < 8 || length > 128 || allowedChars.length === 0) {
+    const message = length < 8 ? "(Password must be at least 8 characters)" :
+                    length > 128 ? "(Password length cannot exceed 128 characters)" :
+                    "(At least 1 set of parameters must be selected)";
     alert(message);
-   
     return;
   }
 
