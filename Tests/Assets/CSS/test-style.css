@@ -118,6 +118,13 @@ button[disabled] {
   overflow: hidden;
 }
 
+.setting {
+  justify-content: space-evenly;
+  align-items: left;
+  margin: 1.25rem 0rem;
+
+}
+
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;

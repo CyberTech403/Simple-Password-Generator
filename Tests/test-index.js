@@ -1,23 +1,35 @@
-let arr =[];
-let start = 0;
-let target = 80; 
+const passwordGenerateBox = document.getElementById("password");
 
-for (let i = 1; i <= 10; i++) {
-  arr.push(i)
+function generatePassword() {
+  const length = parseInt(document.getElementById("length").value);
+  const addLowercase = document.getElementById("lowercase").checked;
+  const addUppercase = document.getElementById("uppercase").checked;
+  const addNumbers = document.getElementById("numbers").checked;
+  const addSymbols = document.getElementById("symbols").checked;
+
+  const chars = [
+    "abcdefghijklmnopqrstuvwxyz",
+    "ABCDEFGHIGKLMNOPQRSTUVWXYZ",
+    "0123456789",
+    "@%+/'!#$^?:,)(}{][~-_."
+  ];
+
+  const allowedChars = [addLowercase, addUppercase, addNumbers, addSymbols]
+    .map((set, index) => (set ? chars[index] : ""))
+    .join("");
+
+  if (length < 8 || allowedChars.length === 0) {
+    const message = length < 8 ? 
+    "(Password must be at least 8 characters)" 
+    : 
+    "(At least 1 set of parameters must be selected)";
+    alert(message);
+   
+    return;
+  }
+
+  const password = Array.from({ length }, () => allowedChars[Math.floor(Math.random() * allowedChars.length)]).join("");
+  passwordGenerateBox.textContent = password;
+  
+  return password;
 }
-
-let end = arr.length - 1;
-
-
-function binarySearch(arr, start, end, target) {
-  console.log(arr.slice(start, end));
-  if(start > end) return false;
-  let midIndex = Math.floor((start + end) / 2);
-  if (arr[midIndex] === target) return true;
-
-  if (arr[midIndex] > target) return binarySearch(arr, start, midIndex -1, target );
-
-  else return binarySearch(arr, midIndex + 1, end, target);
-}
-
-binarySearch(arr, start, end, target);
