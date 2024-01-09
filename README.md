@@ -2,7 +2,13 @@
 
 ### Page Preview 
 
+<p align="center">
+https://cybertech403.github.io/Simple-Password-Generator/
 
+##
+
+<p align="center">
+<img src="https://github.com/CyberTech403/Simple-Password-Generator/blob/main/Assets/css/Screenshot.png" width = "80%"> 
 
 ##
 
