@@ -1,4 +1,4 @@
-# Simple-Password-Generator: 
+# Password-Generator: 
 
 ## Summary 📋
 
